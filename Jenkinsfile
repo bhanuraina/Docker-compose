@@ -5,6 +5,6 @@ node {
     stage 'Checkout'
         checkout scm
         stage 'Integration Test'
-        sh "docker --version"
+        sh "docker-compose --version"
         
 }
