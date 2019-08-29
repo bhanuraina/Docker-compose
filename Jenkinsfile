@@ -1,2 +1,8 @@
-node {step([$class: 'DockerComposeBuilder', dockerComposeFile: 'docker-compose.yml', option: [$class: 'StartAllServices'], useCustomDockerComposeFile: true])
-     }
+node('docker') {
+ 
+    stage 'Checkout'
+        checkout scm
+        stage 'Integration Test'
+        sh "docker-compose -f docker-compose.yml up --force-recreate --abort-on-container-exit"
+        sh "docker-compose -f docker-compose.yml down -v"
+}
