@@ -7,7 +7,7 @@ pipeline {
         {
     steps {
       echo "Running tests in a fully containerized environment..."
-              sh 'docker-compose up'
+              sh '/usr/local/bin/docker-compose up'
           }
   }
         stage('Deliver')
