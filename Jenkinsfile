@@ -11,9 +11,11 @@ pipeline {
               sh 'docker-compose up'
           }
   }
-        stage('Deliver') {
+        stage('Deliver')
+        {
             steps {
                 echo 'Hello'
             }
+    }
     }
 }
