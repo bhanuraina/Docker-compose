@@ -1,8 +1,7 @@
 pipeline {
     agent {
-        any
-          
-            }
+        docker-compose
+                      }
     stages
     {
     stage('build') 
