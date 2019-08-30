@@ -1,5 +1,7 @@
 node {
- 
+ dockerCompose {
+  executable = '/usr/local/bin/docker-compose'
+}
     stage 'Checkout'
  
         checkout scm
